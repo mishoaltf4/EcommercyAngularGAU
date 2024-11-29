@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
 
-    font-family: "Inter", serif;
+    font-family: var(--font-inter);
 }
 
 .adminLogin>form{

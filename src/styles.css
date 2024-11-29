@@ -3,10 +3,12 @@
 :root{
     --primary-color: #4078FF;
     --neutral-color: #0E1422;
+    --neutral-black-color: #5C5F6A;
     --semantic-blue-color: #306CEF;
     --semantic-green-color: #057234; 
     --semantic-red-color: #BE1313;
     --semantic-yellow-color: #F3B40A;
+    --font-inter: "Inter", serif;
 }
 
 *{
