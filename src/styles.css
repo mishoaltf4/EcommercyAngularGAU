@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root{
+    --primary-color: #4078FF;
+    --neutral-color: #0E1422;
+    --semantic-blue-color: #306CEF;
+    --semantic-green-color: #057234; 
+    --semantic-red-color: #BE1313;
+    --semantic-yellow-color: #F3B40A;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a,li{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+h3{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h4{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+h5{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+h6{
+    font-size: 14px;
+    font-weight: 500;
+}
