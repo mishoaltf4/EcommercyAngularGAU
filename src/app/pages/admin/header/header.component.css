@@ -4,6 +4,8 @@ header{
     height: 50px;
     top: 0;
     right: 0;
+    background-color: #f6f6f6;
+    z-index: 99;
 }
 
 .header-inner{

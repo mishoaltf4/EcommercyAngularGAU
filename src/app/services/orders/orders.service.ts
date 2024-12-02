@@ -55,10 +55,34 @@ export class OrdersService {
       categories: ["T-shirt", "Trend"],
       status: "Completed"
     },
+    {
+      id: 6,
+      uId: 1,
+      title: "Raw Black T-Shirt Lineup",
+      price: 75.00,
+      quantity: 1,
+      img: "./Products/cover-1.png",
+      categories: ["T-shirt", "Trend"],
+      status: "Completed"
+    },
   ]
+
+  monthlyGoal = 100;
   constructor() { }
 
   getLengthOfOrders(): number{
     return this.orders.length
+  }
+
+  getOrders(){
+    return this.orders;
+  }
+
+  getMonthlyGoal():number{
+    return this.monthlyGoal;
+  }
+
+  changeMonthlyGoal(newGoal: any):void{
+    this.monthlyGoal = newGoal;
   }
 }

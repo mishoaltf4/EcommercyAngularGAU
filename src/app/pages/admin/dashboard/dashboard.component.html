@@ -26,12 +26,12 @@
             <div class="text">
                 <ul>
                     <h5>Orders</h5>
-                    <p>Monthly GOALS : 1,000</p>
+                    <p>Monthly GOALS : {{monthlyGoal}}</p>
                 </ul>
                 <h3>{{ordersLength}}</h3>
             </div>
-            <p>{{1000 - ordersLength}} left</p>
-            <mat-progress-bar mode="determinate" value="{{ordersLength / 10}}"></mat-progress-bar>
+            <p>{{monthlyGoal - ordersLength}} left</p>
+            <mat-progress-bar mode="determinate" value="{{ordersLength / monthlyGoal * 100}}"></mat-progress-bar>
         </div>
         <div class="box div4">
             <div class="title">

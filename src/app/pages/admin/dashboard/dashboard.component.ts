@@ -14,9 +14,14 @@ import { MatProgressBarModule } from '@angular/material/progress-bar'
 export class DashboardComponent {
   customerLength = 0;
   ordersLength = 0;
+  monthlyGoal = 0;
   constructor(private customersService: CustomersService, private orderService: OrdersService){
     this.customerLength = this.customersService.getLengthOfCustomers();
     this.ordersLength = this.orderService.getLengthOfOrders();
+  }
+
+  ngOnInit(){
+    this.monthlyGoal = this.orderService.getMonthlyGoal();
   }
 
 }

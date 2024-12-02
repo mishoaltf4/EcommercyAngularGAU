@@ -1,1 +1,36 @@
-<p>settings works!</p>
+<app-header></app-header>
+
+<div class="settings">
+    <div class="settings-inner">
+        <h3>Settings</h3>
+        <form [formGroup]="settings">
+            <li>
+                <p>Site name</p>
+                <input type="text" formControlName="siteName">
+                <ng-container *ngIf="settings.get('siteName')?.touched">
+                    <p *ngIf="settings.get('siteName')?.errors?.['minlength']">
+                        minlength of sitename is 6!
+                    </p>
+                </ng-container>
+            </li>
+            <li>
+                <p>Site name</p>
+                <input type="text" formControlName="supportEmail">
+                <ng-container *ngIf="settings.get('supportEmail')?.touched">
+                    <p *ngIf="settings.get('supportEmail')?.errors?.['email']">
+                        Email is Invalid!
+                    </p>
+                </ng-container>
+            </li>
+            <li>
+                <p>Site name</p>
+                <input type="number" formControlName="monthlyGoal">
+            </li>
+
+            <button (click)="onSubmit()">save changes</button>
+        </form>
+    </div>
+
+</div>
+
+<app-left-bar></app-left-bar>
