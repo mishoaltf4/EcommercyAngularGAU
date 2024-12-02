@@ -1,13 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { UserServiceService } from '../../../services/user-service.service';
+import { UserServiceService } from '../../../services/userService/user-service.service';
 import { Router } from '@angular/router';
-import { HeaderComponent } from "../header/header.component";
 
 @Component({
   selector: 'app-login',
-  imports: [ReactiveFormsModule, CommonModule, HeaderComponent],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -29,12 +28,17 @@ export class LoginComponent {
       if(email){
         const user = this.userService.getUserByEmail(email);
 
-        if(user && user.password === password){
-          alert("U loggined in!");
-          this.router.navigate(['/admin/dashboard']);
-          
+        if(user?.status === "admin"){
+          if(user && user.password === password){
+            alert("U loggined in!");
+            user.active = true;
+            this.router.navigate(['/admin/dashboard']);
+            
+          }else{
+            console.error("Invalid email or password!");
+          }
         }else{
-          console.error("Invalid email or password!");
+          alert("User status is not admin!");
         }
       }else{
         console.log('email is required');

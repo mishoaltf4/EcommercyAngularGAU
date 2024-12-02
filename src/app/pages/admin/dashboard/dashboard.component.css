@@ -25,9 +25,13 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 25px;
     
     font-family: var(--font-inter);
+}
+
+.box p, span{
+    color: var(--neutral-black-color);
 }
 
 .box .text{
@@ -48,7 +52,6 @@
     margin-top: 5px;
     font-size: 12px;
     font-weight: 500;
-    color: var(--neutral-black-color);
 }
 
 .box .img{
@@ -76,4 +79,56 @@
 
 .div4, .div5{
     height: 100%;
+}
+
+.div4{
+    position: relative;
+}
+
+.div4 .title p{
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.div4 .title::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #E9E9EB;
+    left: 0;
+    margin-top: 25px;
+}
+
+.div4 .content{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.div4 .content h3{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.div4 .content h3>span{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.div4 .content ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.div4 .content ul>li{
+    padding: 0 15px;
+    height: 30px;
+    border: 1px solid #E6E7E8;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
 }
