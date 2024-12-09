@@ -39,4 +39,8 @@ export class UserServiceService {
   getCurrentUser(){
     return this.activeUser;
   }
+
+  logOut(){
+    this.activeUser.active = false;
+  }
 }
