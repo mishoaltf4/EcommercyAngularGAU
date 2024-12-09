@@ -21,7 +21,7 @@ export class OrdersService {
       title: "Raw Black T-Shirt Lineup",
       price: 75.00,
       quantity: 1,
-      img: "./Products/cover-1.png",
+      img: "./Products/cover-2.png",
       categories: ["T-shirt", "Trend"],
       status: "Completed"
     },
@@ -31,7 +31,7 @@ export class OrdersService {
       title: "Raw Black T-Shirt Lineup",
       price: 75.00,
       quantity: 1,
-      img: "./Products/cover-1.png",
+      img: "./Products/cover-3.png",
       categories: ["T-shirt", "Trend"],
       status: "Completed"
     },
@@ -41,7 +41,7 @@ export class OrdersService {
       title: "Raw Black T-Shirt Lineup",
       price: 75.00,
       quantity: 1,
-      img: "./Products/cover-1.png",
+      img: "./Products/cover-4.png",
       categories: ["T-shirt", "Trend"],
       status: "Completed"
     },
@@ -51,7 +51,7 @@ export class OrdersService {
       title: "Raw Black T-Shirt Lineup",
       price: 75.00,
       quantity: 1,
-      img: "./Products/cover-1.png",
+      img: "./Products/cover-5.png",
       categories: ["T-shirt", "Trend"],
       status: "Completed"
     },
@@ -61,7 +61,7 @@ export class OrdersService {
       title: "Raw Black T-Shirt Lineup",
       price: 75.00,
       quantity: 1,
-      img: "./Products/cover-1.png",
+      img: "./Products/cover-6.png",
       categories: ["T-shirt", "Trend"],
       status: "Completed"
     },

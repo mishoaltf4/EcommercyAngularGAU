@@ -16,7 +16,7 @@
     position: relative;
 }
 
-.settings-inner h3::after{
+.settings-inner h4::after{
     content: "";
     position: absolute;
     left: 0;

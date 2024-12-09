@@ -9,10 +9,11 @@ import { MatInputModule } from '@angular/material/input'
 import { ProductsService } from '../../../services/productService/products.service';
 import { IProducts } from '../../../interfaces/productinterface';
 import { CommonModule } from '@angular/common';
+import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-products',
-  imports: [CommonModule, HeaderComponent, LeftBarComponent, MatTableModule, MatPaginatorModule, MatSortModule, MatFormFieldModule, MatInputModule],
+  imports: [RouterModule,CommonModule, HeaderComponent, LeftBarComponent, MatTableModule, MatPaginatorModule, MatSortModule, MatFormFieldModule, MatInputModule],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
@@ -44,5 +45,4 @@ export class ProductsComponent implements AfterViewInit {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
-
 }

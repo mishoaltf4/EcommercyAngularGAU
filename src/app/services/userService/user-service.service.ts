@@ -23,9 +23,20 @@ export class UserServiceService {
     }
   ]
 
+  activeUser: any;
+
   constructor() { }
 
   getUserByEmail(email: string){
     return this.admin.find(user => user.email === email);
+  }
+
+  getUserById(id: number){
+    this.activeUser = this.admin.find(user => user.id === id)
+    console.log(typeof(this.activeUser));
+  }
+
+  getCurrentUser(){
+    return this.activeUser;
   }
 }

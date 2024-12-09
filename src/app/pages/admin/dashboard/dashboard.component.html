@@ -30,7 +30,7 @@
                 </ul>
                 <h3>{{ordersLength}}</h3>
             </div>
-            <p>{{monthlyGoal - ordersLength}} left</p>
+            <p>{{monthlyGoal - ordersLength > 0 ? monthlyGoal - ordersLength  + ' left' : "Congratulations you reached your goal!"}}</p>
             <mat-progress-bar mode="determinate" value="{{ordersLength / monthlyGoal * 100}}"></mat-progress-bar>
         </div>
         <div class="box div4">

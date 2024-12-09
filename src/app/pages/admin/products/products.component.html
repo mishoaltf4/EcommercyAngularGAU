@@ -3,10 +3,10 @@
 <div class="products">
     <div class="products-inner">
       <div class="filter">
-        <h3>Products</h3>
+        <h4>Products</h4>
         <div class="serv">
-          <button>Add product</button>
-            <input matInput (keyup)="applyFilter($event)" placeholder="Search products" #input>
+          <button routerLink="./add">Add product</button>
+          <input matInput (keyup)="applyFilter($event)" placeholder="Search products" #input>
         </div>
       </div>
 

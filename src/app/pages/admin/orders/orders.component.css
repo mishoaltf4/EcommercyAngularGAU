@@ -12,6 +12,7 @@
     background: #fff;
     border-radius: 10px;
     padding: 30px;
+    font-family: var(--font-inter);
 }
 
 .orders-inner .search{

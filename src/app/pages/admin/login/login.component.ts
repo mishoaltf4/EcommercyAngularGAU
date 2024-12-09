@@ -33,7 +33,7 @@ export class LoginComponent {
             alert("U loggined in!");
             user.active = true;
             this.router.navigate(['/admin/dashboard']);
-            
+            this.userService.getUserById(user.id);
           }else{
             console.error("Invalid email or password!");
           }

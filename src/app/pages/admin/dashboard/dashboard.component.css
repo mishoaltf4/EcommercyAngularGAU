@@ -16,6 +16,7 @@
     grid-template-rows: 25% calc(100vh - 70px - 25% - 35px - 25px);
     grid-column-gap: 35px;
     grid-row-gap: 35px;
+    font-family: var(--font-inter);
 }
 
 .box{
