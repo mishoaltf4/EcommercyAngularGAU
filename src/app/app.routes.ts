@@ -10,6 +10,7 @@ import { ReviewsComponent } from './pages/admin/reviews/reviews.component';
 import { SettingsComponent } from './pages/admin/settings/settings.component';
 import { AuthGuard } from './admin-guard.guard';
 import { AddProductComponent } from './pages/admin/add-product/add-product.component';
+import { HomeComponent } from './pages/user/components/home/home.component';
 
 // canActivate: [AuthGuard]
 // canActivate: [AuthGuard]
@@ -19,6 +20,8 @@ import { AddProductComponent } from './pages/admin/add-product/add-product.compo
 // canActivate: [AuthGuard]
 
 export const routes: Routes = [
+    {path:'', pathMatch:'full' , redirectTo:'user/home'},
+    {path:'user/home',component:HomeComponent},
     {path: 'admin/login', component: LoginComponent},
     {path: 'admin/dashboard', component: DashboardComponent},
     {path: 'admin/products', component: ProductsComponent},

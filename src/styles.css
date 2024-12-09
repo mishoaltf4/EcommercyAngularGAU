@@ -19,6 +19,7 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    color: var(--font-inter);
 }
 
 a,li{
@@ -59,4 +60,35 @@ h6{
 button{
     cursor: pointer;
     border: none;
+}
+
+.conteiner{
+    max-width: 1116px;
+    width: 100%;
+    margin: auto;
+}
+.searchbox{
+width: 264px;
+height: 45px;
+text-align: center;
+}
+.icon1{
+    width: 18px;
+    height: 18px;
+}
+.icon2{
+    width: 18px;
+    height: 18px;
+}
+.searchboxmain{
+    display: flex;
+}
+.icons{
+    display: flex;
+    gap: 20px;
+}
+.righside{
+    display: flex;
+    gap: 40px;
+    align-items: center;
 }
