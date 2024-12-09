@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ViewChild, viewChild} from '@angular/core';
+import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
 import { LeftBarComponent } from "../left-bar/left-bar.component";
 import { MatTableDataSource, MatTableModule} from '@angular/material/table';

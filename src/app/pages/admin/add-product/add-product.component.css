@@ -167,3 +167,8 @@ form .form-right {
   height: 40px;
   font-size: 18px;
 }
+
+.form-block textarea{
+  padding: 5px;
+  font-size: 18px;
+}

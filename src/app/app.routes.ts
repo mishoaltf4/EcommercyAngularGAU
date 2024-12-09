@@ -20,12 +20,12 @@ import { AddProductComponent } from './pages/admin/add-product/add-product.compo
 
 export const routes: Routes = [
     {path: 'admin/login', component: LoginComponent},
-    {path: 'admin/dashboard', component: DashboardComponent},
-    {path: 'admin/products', component: ProductsComponent},
-    {path: 'admin/products/add', component: AddProductComponent},
-    {path: 'admin/orders', component: OrdersComponent},
-    {path: 'admin/customers', component: CustomersComponent},
-    {path: 'admin/reviews', component: ReviewsComponent},
-    {path: 'admin/settings', component: SettingsComponent},
+    {path: 'admin/dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
+    {path: 'admin/products', component: ProductsComponent, canActivate: [AuthGuard]},
+    {path: 'admin/products/add', component: AddProductComponent, canActivate: [AuthGuard]},
+    {path: 'admin/orders', component: OrdersComponent, canActivate: [AuthGuard]},
+    {path: 'admin/customers', component: CustomersComponent, canActivate: [AuthGuard]},
+    {path: 'admin/reviews', component: ReviewsComponent, canActivate: [AuthGuard]},
+    {path: 'admin/settings', component: SettingsComponent, canActivate: [AuthGuard]},
     {path: "**", component: ErrorComponent},
 ];
