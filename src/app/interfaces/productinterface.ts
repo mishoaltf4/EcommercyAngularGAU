@@ -8,10 +8,12 @@ export interface IProducts {
     quantity: number,
     detail: string,
     img: string,
-    categories: string[],
+    categories: string,
     review: {
         username: string,
         date: string,
         comment: string,
     }
+    size:string,
+    color:string
 }
