@@ -7,11 +7,15 @@
   }
   
   .product-card {
+    cursor: pointer;
     background: #fff;
     border-radius: 8px;
     padding: 1rem;
     text-align: center;
-    
+    transition: transform 0.3s ease ;
+  }
+  .product-card:hover {
+    transform: translateY(-5px);
   }
   
   .product-card img {

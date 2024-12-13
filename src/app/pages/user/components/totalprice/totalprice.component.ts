@@ -32,6 +32,6 @@ export class TotalPriceComponent implements OnInit {
     return this.total
   }
   changePath(){
-    this.route.navigate(['/check-out']);
+    this.route.navigate(['user/checkout']);
   }
 }

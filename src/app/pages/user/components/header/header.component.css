@@ -37,4 +37,6 @@ nav ul li{
 nav ul li a{
     color: #5C5F6A;
     font-family: var(--font-inter);
+    transition: transform 0.3s ease;
 }
+

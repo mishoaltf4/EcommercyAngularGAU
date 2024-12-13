@@ -13,6 +13,8 @@ import { AddProductComponent } from './pages/admin/add-product/add-product.compo
 import { HomeComponent } from './pages/user/components/home/home.component';
 import { CategoriesComponent } from './pages/user/components/categories/categories.component';
 import { CartComponent } from './pages/user/components/cart/cart.component';
+import { CheckoutComponent } from './pages/user/components/checkout/checkout.component';
+import { userLoginComponent } from './pages/user/components/userlogin/userlogin.component';
 
 
 // canActivate: [AuthGuard]
@@ -24,8 +26,10 @@ import { CartComponent } from './pages/user/components/cart/cart.component';
 
 export const routes: Routes = [
     {path:'', pathMatch:'full' , redirectTo:'user/home'},
-    {path:'user/cart', component:CartComponent},
     {path:'user/home',component:HomeComponent},
+    {path:'user/login',component:userLoginComponent},
+    {path:'user/checkout', component:CheckoutComponent},
+    {path:'user/cart', component:CartComponent},
     {path:'user/Categories', component:CategoriesComponent},
     {path: 'admin/login', component: LoginComponent},
     {path: 'admin/dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
