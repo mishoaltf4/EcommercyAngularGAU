@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import path from 'node:path';
 import { LoginComponent } from './pages/admin/login/login.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { ErrorComponent } from './pages/error/error.component';
@@ -11,13 +10,6 @@ import { SettingsComponent } from './pages/admin/settings/settings.component';
 import { AuthGuard } from './admin-guard.guard';
 import { AddProductComponent } from './pages/admin/add-product/add-product.component';
 import { HomeComponent } from './pages/user/components/home/home.component';
-
-// canActivate: [AuthGuard]
-// canActivate: [AuthGuard]
-// canActivate: [AuthGuard]
-// canActivate: [AuthGuard]
-// canActivate: [AuthGuard]
-// canActivate: [AuthGuard]
 
 export const routes: Routes = [
     {path:'', pathMatch:'full' , redirectTo:'user/home'},
