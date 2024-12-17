@@ -10,10 +10,19 @@ import { SettingsComponent } from './pages/admin/settings/settings.component';
 import { AuthGuard } from './admin-guard.guard';
 import { AddProductComponent } from './pages/admin/add-product/add-product.component';
 import { HomeComponent } from './pages/user/components/home/home.component';
+import { CategoriesComponent } from './pages/user/components/categories/categories.component';
+import { CartComponent } from './pages/user/components/cart/cart.component';
+import { CheckoutComponent } from './pages/user/components/checkout/checkout.component';
+import { userLoginComponent } from './pages/user/components/userlogin/userlogin.component';
+
 
 export const routes: Routes = [
     {path:'', pathMatch:'full' , redirectTo:'user/home'},
     {path:'user/home',component:HomeComponent},
+    {path:'user/login',component:userLoginComponent},
+    {path:'user/checkout', component:CheckoutComponent},
+    {path:'user/cart', component:CartComponent},
+    {path:'user/Categories', component:CategoriesComponent},
     {path: 'admin/login', component: LoginComponent},
     {path: 'admin/dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
     {path: 'admin/products', component: ProductsComponent, canActivate: [AuthGuard]},

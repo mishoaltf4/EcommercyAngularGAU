@@ -1,8 +1,9 @@
 .header{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color:#ffff;
+    background-color:#ffff;   
 }
 .header-inner{
     width: 100%;
@@ -36,4 +37,6 @@ nav ul li{
 nav ul li a{
     color: #5C5F6A;
     font-family: var(--font-inter);
+    transition: transform 0.3s ease;
 }
+
