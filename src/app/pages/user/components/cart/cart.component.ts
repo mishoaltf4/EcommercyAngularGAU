@@ -18,6 +18,7 @@ export class CartComponent {
   cartItems: IProducts[] = [];
   total: number =0;
   delfee:number=15
+  
   constructor(private cartServ: CartService ) {}
 
   ngOnInit() {

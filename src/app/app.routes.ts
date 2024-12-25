@@ -15,6 +15,7 @@ import { CategoriesComponent } from './pages/user/components/categories/categori
 import { CartComponent } from './pages/user/components/cart/cart.component';
 import { CheckoutComponent } from './pages/user/components/checkout/checkout.component';
 import { userLoginComponent } from './pages/user/components/userlogin/userlogin.component';
+import { SignupComponent } from './pages/user/components/signup/signup.component';
 
 
 // canActivate: [AuthGuard]
@@ -27,6 +28,7 @@ import { userLoginComponent } from './pages/user/components/userlogin/userlogin.
 export const routes: Routes = [
     {path:'', pathMatch:'full' , redirectTo:'user/home'},
     {path:'user/home',component:HomeComponent},
+    {path:'user/signup',component:SignupComponent},
     {path:'user/login',component:userLoginComponent},
     {path:'user/checkout', component:CheckoutComponent},
     {path:'user/cart', component:CartComponent},

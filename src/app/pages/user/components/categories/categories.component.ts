@@ -19,7 +19,7 @@ export class CategoriesComponent {
   currentPage: number = 1; 
   itemsPerPage: number = 6  ; 
   Math = Math;
-
+  
   
 constructor(private prodServ:ProductsService,private cartServ:CartService){
   this.products=prodServ.getProducts();

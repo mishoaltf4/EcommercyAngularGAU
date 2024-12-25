@@ -148,6 +148,7 @@ img{
 .imgcheck{
     display: flex;
     gap: 5px;
+    overflow-x:auto;
 }
 #checkout{
     display: flex;

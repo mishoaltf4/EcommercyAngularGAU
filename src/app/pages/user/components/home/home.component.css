@@ -15,6 +15,12 @@
     position: absolute;
     transform: translate(-50%, -50%);
 }
+
+.product-badge {
+  background: #E6E7E8;
+  color: #0E1422;
+}
+
 .img{
     position: relative;
     z-index: 1;
@@ -124,8 +130,8 @@
 }
 
 .product-badge {
-  background-color: #e0f7fa;
-  color: #00796b;
+  background-color: #E6E7E8;
+  color: #0E1422;
   font-size: 0.8rem;
   padding: 0.2rem 0.5rem;
   border-radius: 5px;

@@ -11,6 +11,7 @@ import { FooterComponent } from '../footer/footer.component';
 import { IProducts } from '../../../../interfaces/productinterface';
 import { CartService } from '../../../../services/cartService/cart.service';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-checkout',
   imports: [
@@ -32,7 +33,7 @@ export class CheckoutComponent {
     total: number = 0;
     delfee:number = 15;
   shippingForm: FormGroup;
-  constructor(private fb:FormBuilder , private cartServ: CartService,){
+  constructor(private fb:FormBuilder , private cartServ: CartService, private route:Router){
     this.shippingForm=this.fb.group({
       streetAddress: ['', Validators.required],
       city: ['', Validators.required],
@@ -57,6 +58,7 @@ export class CheckoutComponent {
   onSubmit(){
     if (this.shippingForm.valid) {
       console.log('Form Submitted:',this.shippingForm.value);
+      this.route.navigate(['user/home']);
     }else{
       console.error(
         'This Form Is Invalid'

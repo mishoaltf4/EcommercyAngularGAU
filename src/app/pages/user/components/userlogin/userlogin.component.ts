@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { EmailValidator, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
-import { UserServiceService } from '../../../../services/userService/user-service.service';
 import { Router } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
+import { SignupService } from '../../../../services/signup/signup.service';
 
 
 @Component({
@@ -16,7 +16,7 @@ import { FooterComponent } from '../footer/footer.component';
 export class userLoginComponent {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder , private userServ:UserServiceService ,private route:Router) {
+  constructor(private fb: FormBuilder , private userServ:SignupService ,private route:Router) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]], 
       password: ['', [Validators.required, Validators.minLength(6)]] 

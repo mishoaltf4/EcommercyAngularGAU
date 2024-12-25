@@ -240,8 +240,10 @@ export class ProductsService {
   getProducts(){
     return this.products;
   }
-
   getProductByUID(userId: number){
     return this.products.filter(user => user.uId === userId);
+  }
+  getProductByID(userid: number){
+    return this.products.filter(user => user.id === userid)
   }
 }

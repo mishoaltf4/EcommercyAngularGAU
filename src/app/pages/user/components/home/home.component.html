@@ -45,7 +45,7 @@
                <img  [src]="product.img" alt="Product Image"> 
                 <h3 class="product-name">{{product.title}}</h3>
                 <div class="product-details">
-                  <span class="product-badge">{{ product.stock }}</span>
+                  <span class="product-badge" >{{ product.stock ? 'IN STOCK' : 'OUT OF STOCK' }}</span>
                   <span class="product-price">\${{ product.price }}</span>
                 </div>
               </div>
@@ -91,7 +91,7 @@
                        <img  [src]="product.img" alt="Product Image">
                         <h3 class="product-name">{{product.title}}</h3>
                         <div class="product-details">
-                          <span class="product-badge">{{ product.stock }}</span>
+                          <span class="product-badge">{{ product.stock ? 'IN STOCK' : 'OUT OF STOCK' }}</span>
                           <span class="product-price">\${{ product.price }}</span>
                         </div>
                       </div>
