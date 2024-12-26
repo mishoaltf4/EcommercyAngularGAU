@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UserServiceService } from '../../../services/userService/user-service.service';
 import { Router } from '@angular/router';
+import {AuthService} from '../../../services/auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -17,34 +18,15 @@ export class LoginComponent {
   });
 
 
-  constructor(private userService: UserServiceService, private router: Router){
+  constructor(private router: Router, private auth: AuthService){
   }
 
   onSubmit(){
     if(this.adminLogin.valid){
-      const email = this.adminLogin.get('email')?.value;
-      const password = this.adminLogin.get('password')?.value;
+      const email = this.adminLogin.get('email')!.value as string;
+      const password = this.adminLogin.get('password')!.value as string;
 
-      if(email){
-        const user = this.userService.getUserByEmail(email);
-
-        if(user?.status === "admin"){
-          if(user && user.password === password){
-            alert("U loggined in!");
-            user.active = true;
-            this.router.navigate(['/admin/dashboard']);
-            this.userService.getUserById(user.id);
-          }else{
-            console.error("Invalid email or password!");
-          }
-        }else{
-          alert("User status is not admin!");
-        }
-      }else{
-        console.log('email is required');
-      }
-    }else{
-      console.error('Form is invalid');
+      this.auth.adminSignIn(email, password);
     }
   }
 }
