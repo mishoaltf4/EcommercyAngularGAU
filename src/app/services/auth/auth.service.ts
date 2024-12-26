@@ -2,23 +2,22 @@ import { Injectable } from '@angular/core';
 import {Router} from '@angular/router';
 import {UserServiceService} from '../userService/user-service.service';
 import {IUser} from '../../interfaces/user.interface';
+import { SignupService } from '../signup/signup.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private router: Router, private userService: UserServiceService) {
+  constructor(private router: Router, private userService: UserServiceService, private signup:SignupService) {
   }
 
   userSignIn(email: string, password: string) {
-    const user: IUser | undefined = this.userService.getUserByEmail(email);
+    const user: IUser | undefined = this.signup.getUserByEmail(email);
     if(user){
       if(user.password === password){
         alert("Congratulations!");
-        this.userService.getUserById(user.id)
-        user.active = true;
-        this.router.navigate(['/']);
+        this.router.navigate(['user/home']);
       }
     }else{
       alert(`Invalid email or password`);
